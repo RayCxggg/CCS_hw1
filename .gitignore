@@ -1,3 +1,2 @@
 /linux-5.4.98
-linux-5.4.98.tar.sign
-linux-5.4.98.tar
+!/linux-5.4.98/.config

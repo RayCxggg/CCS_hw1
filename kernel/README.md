@@ -4,3 +4,5 @@ vmlinux：linux-5.4-98/路径下。静态链接的 Linux kernel，以可执行�
 
 rootfs.img：busybox打包生成的文件系统。
 
+boot.sh：qemu启动脚本。
+

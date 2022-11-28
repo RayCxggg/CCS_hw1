@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 qemu-system-x86_64 \
     -m 64M \
     -nographic \

@@ -1,0 +1,1 @@
+cmd_/home/chexijia/CCS_hw1/samples/ko_test/ko_test.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000  --build-id  -T ./scripts/module-common.lds -o /home/chexijia/CCS_hw1/samples/ko_test/ko_test.ko /home/chexijia/CCS_hw1/samples/ko_test/ko_test.o /home/chexijia/CCS_hw1/samples/ko_test/ko_test.mod.o;  true

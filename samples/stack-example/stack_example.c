@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-void success() { puts("You Hava already controlled it."); }
+void success() { puts("You Have already controlled it."); }
 void vulnerable()
 {
     char s[12];

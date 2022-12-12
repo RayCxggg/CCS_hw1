@@ -4,7 +4,7 @@ This repository contains the code for Homework 0. It is a simple Stack Overflow 
 
 ## Tutorial
 
-Build `example1.c`:
+Build `example1.c` to executable file:
 ```
 gcc -m32 -fno-stack-protector -z execstack -D_FORTIFY_SOURCE=0 -o example1 example1.c
 ```
@@ -28,4 +28,9 @@ sudo sysctl -w kernel.randomize_va_space=0
 To renable ASLR:
 ```
 sudo sysctl -w kernel.randomize_va_space=2
+```
+
+Build to  generate assembly code output:
+```
+gcc -S -o example1.s example1.c
 ```

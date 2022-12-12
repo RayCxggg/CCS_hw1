@@ -1,3 +1,4 @@
 /linux-5.4.98
 /qemu-7.2.0-rc2
 /busybox-1.32.1
+*.svn

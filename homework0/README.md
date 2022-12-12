@@ -4,13 +4,28 @@ This repository contains the code for Homework 0. It is a simple Stack Overflow 
 
 ## Tutorial
 
-Build `main.c`:
+Build `example1.c`:
 ```
-gcc main.c -o main
-```
-
-Check the security properties of the output file `main`:
-```
-checksec --file=main
+gcc -m32 -fno-stack-protector -z execstack -D_FORTIFY_SOURCE=0 -o example1 example1.c
 ```
 
+This is what the different compile switches do:
+
+- -m32: compile for 32-bit
+- -fno-stack-protector: disable stack canaries
+- -z execstack: ensure the stack is executable (disable NX bit protection)
+- -D_FORTIFY_SOURCE=0: disable FORTIFY_SOURCE
+
+Check the security properties of the output file `example`:
+```
+checksec --file=example1
+```
+
+To disable ASLR:
+```
+sudo sysctl -w kernel.randomize_va_space=0
+```
+To renable ASLR:
+```
+sudo sysctl -w kernel.randomize_va_space=2
+```

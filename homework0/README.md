@@ -30,6 +30,11 @@ To renable ASLR:
 sudo sysctl -w kernel.randomize_va_space=2
 ```
 
+查看设置情况：
+```
+cat /proc/sys/kernel/randomize_va_space
+```
+
 Build to  generate assembly code output:
 ```
 gcc -S -o example1.s example1.c

